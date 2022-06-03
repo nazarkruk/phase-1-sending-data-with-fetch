@@ -16,14 +16,14 @@ function submitData(name, email){
     .then (res => res.json())
     .then (data => {
         let p = document.createElement('p')
-        p.innerText = `${data.id}`
+        p.innerHTML = `${data.id}`
         document.body.appendChild(p)
 
 
     })
     .catch(err=> {
         let p = document.createElement('p')
-        p.innerText = `${err}`
+        p.innerHTML = `${err}`
         document.body.appendChild(p)
     })
 }
